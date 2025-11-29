@@ -1,0 +1,58 @@
+﻿@using EntityLayer.Concrete
+@model List<Comment>
+
+<div class="comments mt-5">
+    <h4 class="side-title">Yorumlar</h4>
+
+    @foreach (var item in Model)
+    {
+        <div class="comment-card d-flex mt-3 p-3">
+            <!-- dikdörtgen kutu -->
+            <div class="img-circle me-3">
+                <img src="@item.CommentImage" alt="@item.CommentUser">
+            </div>
+            <div class="comment-body">
+                <div class="comment-header mb-1">
+                    <strong>@item.CommentUser</strong>
+                    <span class="text-muted ms-2">@(((DateTime)item.CommentDate).ToString("dd-MMM-yyyy"))</span>
+                </div>
+                <p class="mb-0">@item.CommentContent</p>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    /* Yorum kutusu dikdörtgen görünümü */
+    .comment-card {
+        background-color: #f8f9fa; /* açık gri arkaplan */
+        border-radius: 8px;
+        border: 1px solid #e0e0e0;
+        align-items: flex-start;
+    }
+
+    /* Daire şeklinde resim */
+    .img-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+        .img-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+    /* Yorum metni */
+    .comment-body {
+        flex: 1;
+    }
+
+    .comment-header {
+        font-size: 0.9rem;
+    }
+</style>
