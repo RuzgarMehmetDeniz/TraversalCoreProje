@@ -1,4 +1,4 @@
-# TraversalCoreProje  
+# Traversal Core Proje 8.0
 
 **TraversalCoreProje** — Asp.Net Core + MVC + N-Katmanlı mimari ile geliştirilmiş, dinamik ve modüler bir seyahat/rezervasyon uygulaması.  
 Eğitmenliğini Murat Yücedağ hocamın yürüttüğü ve YouTube üzerinde yayınlanan Traversal serisi üzerinden geliştirilmiştir.
